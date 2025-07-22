@@ -37,6 +37,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'app'
 ]
 
 MIDDLEWARE = [
@@ -77,7 +78,7 @@ DATABASES = {
         'ENGINE': 'django.db.backends.postgresql',
         'NAME': 'mentoria',
         'USER': 'postgres',
-        'PASSWORD': '123456',
+        'PASSWORD': 'fefegh53',
         'HOST': 'localhost',
         'PORT': '5432',
     }
@@ -93,7 +94,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'core'
+    'app'
 ]
 
 CRISPY_TEMPLATE_PACK = 'bootstrap4'

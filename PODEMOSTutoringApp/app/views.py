@@ -1,17 +1,23 @@
-from django.views import View
-from django.shortcuts import render
-from .models import *
+# C:\Users\felip\PODEMOSTutoringApp\app\views.py
 
-class IndexView(View):
-    def get(self, request, *args, **kwargs):
-        return render(request, 'index.html')
+from django.views.generic import TemplateView
 
-class MentoresView(View):
-    def get(self, request, *args, **kwargs):
-        mentores = Mentor.objects.all()
-        return render(request, 'mentores.html', {'mentores': mentores})
+# View para a página inicial
+class IndexView(TemplateView):
+    template_name = "app/index.html" # Você precisará criar este arquivo HTML depois
 
-class SessoesView(View):
-    def get(self, request, *args, **kwargs):
-        sessoes = SessaoMentoria.objects.filter(mentorado__usuario=request.user)
-        return render(request, 'sessoes.html', {'sessoes': sessoes})
+# View para a página de mentores
+class MentoresView(TemplateView):
+    template_name = "app/mentores.html" # Você precisará criar este arquivo HTML depois
+
+# View para a página de sessões
+class SessoesView(TemplateView):
+    template_name = "app/sessoes.html" # Você precisará criar este arquivo HTML depois
+
+# View para a página de áreas de conhecimento
+class AreasConhecimentoView(TemplateView):
+    template_name = "app/areas_conhecimento.html" # Você precisará criar este arquivo HTML depois
+
+# View para a página de agendamento de sessão
+class AgendarSessaoView(TemplateView):
+    template_name = "app/agendar_sessao.html" # Você precisará criar este arquivo HTML depois
